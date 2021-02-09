@@ -1,0 +1,863 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LaunchpadLib</name>
+    </assembly>
+    <members>
+        <member name="T:Launchpad.Launchpad_MK2">
+            <summary>
+            Launchpad MK2 Edition
+            </summary>
+            <summary>
+            Launchpad_MK2
+            </summary>
+        </member>
+        <member name="P:Launchpad.Launchpad_MK2.KeyPadButtons">
+            <summary>
+            Pad button list.
+            </summary>
+        </member>
+        <member name="P:Launchpad.Launchpad_MK2.Input">
+            <summary>
+            InputDevice for launchpad
+            </summary>
+        </member>
+        <member name="P:Launchpad.Launchpad_MK2.Output">
+            <summary>
+            OutputDevice for launchpad
+            </summary>
+        </member>
+        <member name="P:Launchpad.Launchpad_MK2.MultiSelect">
+            <summary>
+            Whether can "Drag and Press"
+            </summary>
+        </member>
+        <member name="P:Launchpad.Launchpad_MK2.DefaultPressedBrush">
+            <summary>
+            Default value of <see cref="P:Launchpad.Launchpad_MK2.PressColor"/>
+            </summary>
+        </member>
+        <member name="E:Launchpad.Launchpad_MK2.ButtonPressed">
+            <summary>
+            Occurs when Pad button pressed.
+            </summary>
+        </member>
+        <member name="E:Launchpad.Launchpad_MK2.ChainChanged">
+            <summary>
+            Occurs when chain button pressed.
+            </summary>
+        </member>
+        <member name="E:Launchpad.Launchpad_MK2.MoveButtonPressed">
+            <summary>
+            Occurs when move button pressed.
+            </summary>
+        </member>
+        <member name="E:Launchpad.Launchpad_MK2.ModeChanged">
+            <summary>
+            Occurs when mode button pressed.
+            </summary>
+        </member>
+        <member name="T:Launchpad.Launchpad_MK2.BtnStyle">
+            <summary>
+            Style of Buttons. Not support now.
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_MK2.BtnStyle.Standerd">
+            <summary>
+            Standard
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_MK2.BtnStyle.Black">
+            <summary>
+            Black
+            </summary>
+        </member>
+        <member name="T:Launchpad.Launchpad_MK2.MoveButton">
+            <summary>
+            Move buttons
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_MK2.MoveButton.Up">
+            <summary>
+            Up button (▲)
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_MK2.MoveButton.Down">
+            <summary>
+            Down button (▼)
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_MK2.MoveButton.Left">
+            <summary>
+            Left button (◀)
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_MK2.MoveButton.Right">
+            <summary>
+            Right button (▶)
+            </summary>
+        </member>
+        <member name="T:Launchpad.Launchpad_MK2.Mode">
+            <summary>
+            Mode buttons
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_MK2.Mode.Session">
+            <summary>
+            Session
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_MK2.Mode.User1">
+            <summary>
+            User1
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_MK2.Mode.User2">
+            <summary>
+            User2
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_MK2.Mode.Mixer">
+            <summary>
+            Mixer
+            </summary>
+        </member>
+        <member name="T:Launchpad.Launchpad_MK2.KeyControl">
+            <summary>
+            Control enum
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_MK2.KeyControl.Up">
+            <summary>
+            Up
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_MK2.KeyControl.Down">
+            <summary>
+            Down
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_MK2.KeyControl.Left">
+            <summary>
+            Left
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_MK2.KeyControl.Right">
+            <summary>
+            Right
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_MK2.KeyControl.Session">
+            <summary>
+            Session
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_MK2.KeyControl.Note">
+            <summary>
+            Note
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_MK2.KeyControl.Device">
+            <summary>
+            Device
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_MK2.KeyControl.User">
+            <summary>
+            User
+            </summary>
+        </member>
+        <member name="M:Launchpad.Launchpad_MK2.#ctor">
+            <summary>
+            Initailize <see cref="T:Launchpad.Launchpad_MK2"/>
+            </summary>
+        </member>
+        <member name="M:Launchpad.Launchpad_MK2.GetBrushFromString(System.String)">
+            <summary>
+            Convert <see cref="T:System.String"/> to <see cref="T:System.Windows.Media.Brush"/>
+            </summary>
+            <param name="s">An string that represents converted text</param>
+            <returns>An <see cref="T:System.Windows.Media.Brush"/> that represents converted text</returns>
+            <exception cref="T:System.NotSupportedException"/>
+        </member>
+        <member name="M:Launchpad.Launchpad_MK2.ConnectInput(Midi.Devices.IInputDevice)">
+            <summary>
+            Connect InputDevice to Launchpad
+            </summary>
+            <param name="input">InputDevice that want to connect</param>
+        </member>
+        <member name="M:Launchpad.Launchpad_MK2.ConnectOutput(Midi.Devices.IOutputDevice)">
+            <summary>
+            Connect OutputDevice to Launchpad
+            </summary>
+            <param name="output">OutputDevice that want to connect</param>
+        </member>
+        <member name="M:Launchpad.Launchpad_MK2.StartReceiving(Midi.Devices.Clock)">
+            <summary>
+            Start receving from input. Use <see cref="M:Launchpad.Launchpad_MK2.ConnectInput(Midi.Devices.IInputDevice)"/> first.
+            </summary>
+            <param name="clock"></param>
+        </member>
+        <member name="M:Launchpad.Launchpad_MK2.StopReceiving">
+            <summary>
+            Stop receving from input.
+            </summary>
+        </member>
+        <member name="M:Launchpad.Launchpad_MK2.NoteOn(Launchpad.Structures.Location,System.Int32)">
+            <summary>
+            Turn on the note with velocity.
+            </summary>
+            <param name="location">Location of note</param>
+            <param name="velocity">Number of launchpad color. See "<see href="https://github.com/Lukince/LaunchpadColor">Launchpad Color</see>"</param>
+            <exception cref="T:System.NullReferenceException" />
+        </member>
+        <member name="M:Launchpad.Launchpad_MK2.NoteOff(Launchpad.Structures.Location)">
+            <summary>
+            Turn off the note.
+            </summary>
+            <param name="location">Location of note</param>
+            <exception cref="T:System.NullReferenceException" />
+        </member>
+        <member name="M:Launchpad.Launchpad_MK2.NotePress(Launchpad.Structures.Location,System.TimeSpan,System.Int32)">
+            <summary>
+            Run <see cref="M:Launchpad.Launchpad_MK2.NoteOn(Launchpad.Structures.Location,System.Int32)"/> and <see cref="M:Launchpad.Launchpad_MK2.NoteOff(Launchpad.Structures.Location)"/> with delay
+            </summary>
+            <param name="location">Location of note</param>
+            <param name="delay">Holding time</param>
+            <param name = "velocity" > Number of launchpad color. See "<see href="https://github.com/Lukince/LaunchpadColor">Launchpad Color</see>"</param>
+        </member>
+        <member name="M:Launchpad.Launchpad_MK2.ControlOn(Launchpad.Launchpad_MK2.KeyControl,System.Int32)">
+            <summary>
+            Turn on the control
+            </summary>
+            <param name="key">Key of control</param>
+            <param name="velocity">Number of launchpad color. See "<see href="https://github.com/Lukince/LaunchpadColor">Launchpad Color</see>"</param>
+            <exception cref="T:System.NullReferenceException" />
+        </member>
+        <member name="M:Launchpad.Launchpad_MK2.ControlOff(Launchpad.Launchpad_MK2.KeyControl)">
+            <summary>
+            Turn off the control
+            </summary>
+            <param name="key">Key of control</param>
+            <exception cref="T:System.NullReferenceException" />
+        </member>
+        <member name="M:Launchpad.Launchpad_MK2.ControlPress(Launchpad.Launchpad_MK2.KeyControl,System.TimeSpan,System.Int32)">
+            <summary>
+            Run <see cref="M:Launchpad.Launchpad_MK2.ControlOn(Launchpad.Launchpad_MK2.KeyControl,System.Int32)"/> and <see cref="M:Launchpad.Launchpad_MK2.ControlOff(Launchpad.Launchpad_MK2.KeyControl)"/> with delay
+            </summary>
+            <param name="key">Key of control</param>
+            <param name="delay">Holding time</param>
+            <param name = "velocity" > Number of launchpad color. See "<see href="https://github.com/Lukince/LaunchpadColor">Launchpad Color</see>"</param>
+        </member>
+        <member name="M:Launchpad.Launchpad_MK2.SetMultiSelect(System.Boolean)">
+            <summary>
+            Set whether "Drag and Press"
+            </summary>
+        </member>
+        <member name="M:Launchpad.Launchpad_MK2.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Launchpad.Launchpad_Pro">
+            <summary>
+            Launchpad Pro Edition
+            </summary>
+            <summary>
+            Launchpad_Pro
+            </summary>
+        </member>
+        <member name="P:Launchpad.Launchpad_Pro.KeyPadButtons">
+            <summary>
+            Pad button list.
+            </summary>
+        </member>
+        <member name="P:Launchpad.Launchpad_Pro.Input">
+            <summary>
+            InputDevice for launchpad
+            </summary>
+        </member>
+        <member name="P:Launchpad.Launchpad_Pro.Output">
+            <summary>
+            OutputDevice for launchpad
+            </summary>
+        </member>
+        <member name="P:Launchpad.Launchpad_Pro.MultiSelect">
+            <summary>
+            Whether can "Drag and Press"
+            </summary>
+        </member>
+        <member name="P:Launchpad.Launchpad_Pro.DefaultPressedBrush">
+            <summary>
+            Default value of <see cref="P:Launchpad.Launchpad_Pro.PressColor"/>
+            </summary>
+        </member>
+        <member name="E:Launchpad.Launchpad_Pro.ButtonPressed">
+            <summary>
+            Occurs when Pad button pressed.
+            </summary>
+        </member>
+        <member name="E:Launchpad.Launchpad_Pro.ChainChanged">
+            <summary>
+            Occurs when chain button pressed.
+            </summary>
+        </member>
+        <member name="E:Launchpad.Launchpad_Pro.MoveButtonPressed">
+            <summary>
+            Occurs when move button pressed.
+            </summary>
+        </member>
+        <member name="E:Launchpad.Launchpad_Pro.ModeChanged">
+            <summary>
+            Occurs when mode button pressed.
+            </summary>
+        </member>
+        <member name="E:Launchpad.Launchpad_Pro.MixerButtonPressed">
+            <summary>
+            Occurs when mixer button pressed.
+            </summary>
+        </member>
+        <member name="E:Launchpad.Launchpad_Pro.FunctionButtonPressed">
+            <summary>
+            Occurs when function button pressed.
+            </summary>
+        </member>
+        <member name="T:Launchpad.Launchpad_Pro.BtnStyle">
+            <summary>
+            Style of Buttons. Not support now.
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_Pro.BtnStyle.Standard">
+            <summary>
+            Standard
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_Pro.BtnStyle.Black">
+            <summary>
+            Black
+            </summary>
+        </member>
+        <member name="T:Launchpad.Launchpad_Pro.MoveButton">
+            <summary>
+            Move buttons
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_Pro.MoveButton.Up">
+            <summary>
+            Up button (▲)
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_Pro.MoveButton.Down">
+            <summary>
+            Down button (▼)
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_Pro.MoveButton.Left">
+            <summary>
+            Left button (◀)
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_Pro.MoveButton.Right">
+            <summary>
+            Right button (▶)
+            </summary>
+        </member>
+        <member name="T:Launchpad.Launchpad_Pro.Mode">
+            <summary>
+            Mode buttons
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_Pro.Mode.Session">
+            <summary>
+            Session
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_Pro.Mode.Note">
+            <summary>
+            Note
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_Pro.Mode.Device">
+            <summary>
+            Device
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_Pro.Mode.User">
+            <summary>
+            User
+            </summary>
+        </member>
+        <member name="T:Launchpad.Launchpad_Pro.Mixer">
+            <summary>
+            Mixer buttons
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_Pro.Mixer.Record_Arm">
+            <summary>
+            Record Arm
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_Pro.Mixer.Track_Select">
+            <summary>
+            Track Select
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_Pro.Mixer.Mute">
+            <summary>
+            Mute
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_Pro.Mixer.Solo">
+            <summary>
+            Solo
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_Pro.Mixer.Volumn">
+            <summary>
+            Volumn
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_Pro.Mixer.Pan">
+            <summary>
+            Pan
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_Pro.Mixer.Sends">
+            <summary>
+            Sends
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_Pro.Mixer.Stop_Clip">
+            <summary>
+            Stop Clip
+            </summary>
+        </member>
+        <member name="T:Launchpad.Launchpad_Pro.Function">
+            <summary>
+            Function buttons
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_Pro.Function.Shift">
+            <summary>
+            Shift
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_Pro.Function.Click">
+            <summary>
+            Click
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_Pro.Function.Undo">
+            <summary>
+            Undo
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_Pro.Function.Delete">
+            <summary>
+            Delete
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_Pro.Function.Quantise">
+            <summary>
+            Quantise
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_Pro.Function.Dupilcate">
+            <summary>
+            Dupilcate
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_Pro.Function.Double">
+            <summary>
+            Double
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_Pro.Function.Record">
+            <summary>
+            Record
+            </summary>
+        </member>
+        <member name="T:Launchpad.Launchpad_Pro.KeyControl">
+            <summary>
+            Control enum
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_Pro.KeyControl.Up">
+            <summary>
+            Up
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_Pro.KeyControl.Down">
+            <summary>
+            Down
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_Pro.KeyControl.Left">
+            <summary>
+            Left
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_Pro.KeyControl.Right">
+            <summary>
+            Right
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_Pro.KeyControl.Session">
+            <summary>
+            Session
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_Pro.KeyControl.Note">
+            <summary>
+            Note
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_Pro.KeyControl.Device">
+            <summary>
+            Device
+            </summary>
+        </member>
+        <member name="F:Launchpad.Launchpad_Pro.KeyControl.User">
+            <summary>
+            User
+            </summary>
+        </member>
+        <member name="M:Launchpad.Launchpad_Pro.#ctor">
+            <summary>
+            Initailize <see cref="T:Launchpad.Launchpad_Pro"/>
+            </summary>
+        </member>
+        <member name="M:Launchpad.Launchpad_Pro.GetBrushFromString(System.String)">
+            <summary>
+            Convert <see cref="T:System.String"/> to <see cref="T:System.Windows.Media.Brush"/>
+            </summary>
+            <param name="s">An string that represents converted text</param>
+            <returns>An <see cref="T:System.Windows.Media.Brush"/> that represents converted text</returns>
+            <exception cref="T:System.NotSupportedException"/>
+        </member>
+        <member name="M:Launchpad.Launchpad_Pro.ConnectInput(Midi.Devices.IInputDevice)">
+            <summary>
+            Connect InputDevice to Launchpad
+            </summary>
+            <param name="input">InputDevice that want to connect</param>
+        </member>
+        <member name="M:Launchpad.Launchpad_Pro.ConnectOutput(Midi.Devices.IOutputDevice)">
+            <summary>
+            Connect OutputDevice to Launchpad
+            </summary>
+            <param name="output">OutputDevice that want to connect</param>
+        </member>
+        <member name="M:Launchpad.Launchpad_Pro.StartReceiving(Midi.Devices.Clock)">
+            <summary>
+            Start receving from input. Use <see cref="M:Launchpad.Launchpad_Pro.ConnectInput(Midi.Devices.IInputDevice)"/> first.
+            </summary>
+            <param name="clock"></param>
+        </member>
+        <member name="M:Launchpad.Launchpad_Pro.StopReceiving">
+            <summary>
+            Stop receving from input.
+            </summary>
+        </member>
+        <member name="M:Launchpad.Launchpad_Pro.NoteOn(Launchpad.Structures.Location,System.Int32)">
+            <summary>
+            Turn on the note with velocity.
+            </summary>
+            <param name="location">Location of note</param>
+            <param name="velocity">Number of launchpad color. See "<see href="https://github.com/Lukince/LaunchpadColor">Launchpad Color</see>"</param>
+            <exception cref="T:System.NullReferenceException" />
+        </member>
+        <member name="M:Launchpad.Launchpad_Pro.NoteOff(Launchpad.Structures.Location)">
+            <summary>
+            Turn off the note.
+            </summary>
+            <param name="location">Location of note</param>
+            <exception cref="T:System.NullReferenceException" />
+        </member>
+        <member name="M:Launchpad.Launchpad_Pro.NotePress(Launchpad.Structures.Location,System.TimeSpan,System.Int32)">
+            <summary>
+            Run <see cref="M:Launchpad.Launchpad_Pro.NoteOn(Launchpad.Structures.Location,System.Int32)"/> and <see cref="M:Launchpad.Launchpad_Pro.NoteOff(Launchpad.Structures.Location)"/> with delay
+            </summary>
+            <param name="location">Location of note</param>
+            <param name="delay">Holding time</param>
+            <param name = "velocity" > Number of launchpad color. See "<see href="https://github.com/Lukince/LaunchpadColor">Launchpad Color</see>"</param>
+        </member>
+        <member name="M:Launchpad.Launchpad_Pro.ControlOn(Launchpad.Launchpad_Pro.KeyControl,System.Int32)">
+            <summary>
+            Turn on the control
+            </summary>
+            <param name="key">Key of control</param>
+            <param name="velocity">Number of launchpad color. See "<see href="https://github.com/Lukince/LaunchpadColor">Launchpad Color</see>"</param>
+            <exception cref="T:System.NullReferenceException" />
+        </member>
+        <member name="M:Launchpad.Launchpad_Pro.ControlOff(Launchpad.Launchpad_Pro.KeyControl)">
+            <summary>
+            Turn off the control
+            </summary>
+            <param name="key">Key of control</param>
+            <exception cref="T:System.NullReferenceException" />
+        </member>
+        <member name="M:Launchpad.Launchpad_Pro.ControlPress(Launchpad.Launchpad_Pro.KeyControl,System.TimeSpan,System.Int32)">
+            <summary>
+            Run <see cref="M:Launchpad.Launchpad_Pro.ControlOn(Launchpad.Launchpad_Pro.KeyControl,System.Int32)"/> and <see cref="M:Launchpad.Launchpad_Pro.ControlOff(Launchpad.Launchpad_Pro.KeyControl)"/> with delay
+            </summary>
+            <param name="key">Key of control</param>
+            <param name="delay">Holding time</param>
+            <param name = "velocity" > Number of launchpad color. See "<see href="https://github.com/Lukince/LaunchpadColor">Launchpad Color</see>"</param>
+        </member>
+        <member name="M:Launchpad.Launchpad_Pro.SetMultiSelect(System.Boolean)">
+            <summary>
+            Set whether "Drag and Press"
+            </summary>
+        </member>
+        <member name="M:Launchpad.Launchpad_Pro.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Launchpad.Structures.EventArgs.ButtonPressedEventArgs">
+            <summary>
+            Provide data for ButtonPressedEvent. Contains pressed location and mouse event
+            </summary>
+        </member>
+        <member name="M:Launchpad.Structures.EventArgs.ButtonPressedEventArgs.#ctor(System.Windows.RoutedEvent,System.Object)">
+            <summary>
+            Create new instant
+            </summary>
+            <param name="revent">Routed event</param>
+            <param name="source">Rectangle source</param>
+        </member>
+        <member name="M:Launchpad.Structures.EventArgs.ButtonPressedEventArgs.#ctor(System.Windows.RoutedEvent,System.Object,System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Create new instant
+            </summary>
+            <param name="revent">Routed event</param>
+            <param name="source">Rectangle source</param>
+            <param name="e">Mouse event</param>
+        </member>
+        <member name="P:Launchpad.Structures.EventArgs.ButtonPressedEventArgs.PressedLocation">
+            <summary>
+            Button location of the event occurred
+            </summary>
+        </member>
+        <member name="P:Launchpad.Structures.EventArgs.ButtonPressedEventArgs.MouseEvent">
+            <summary>
+            Mouse event of the event occurred
+            </summary>
+        </member>
+        <member name="T:Launchpad.Structures.EventArgs.ChainChangedEventArgs">
+            <summary>
+            Provide data for ChainChangedEvent. Contains chain and mouse event
+            </summary>
+        </member>
+        <member name="M:Launchpad.Structures.EventArgs.ChainChangedEventArgs.#ctor(System.Windows.RoutedEvent,System.Object)">
+            <summary>
+            Create new instant
+            </summary>
+            <param name="revent">Routed event</param>
+            <param name="source">Rectangle source</param>
+        </member>
+        <member name="M:Launchpad.Structures.EventArgs.ChainChangedEventArgs.#ctor(System.Windows.RoutedEvent,System.Object,System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Create new instant
+            </summary>
+            <param name="revent">Routed event</param>
+            <param name="source">Rectangle source</param>
+            <param name="e">Mouse event</param>
+        </member>
+        <member name="P:Launchpad.Structures.EventArgs.ChainChangedEventArgs.Chain">
+            <summary>
+            Chain of the event occurred
+            </summary>
+        </member>
+        <member name="P:Launchpad.Structures.EventArgs.ChainChangedEventArgs.MouseEvent">
+            <summary>
+            Mouse event of the event occurred
+            </summary>
+        </member>
+        <member name="T:Launchpad.Structures.EventArgs.MoveButtonPressedEventArgs">
+            <summary>
+            Provide data for MoveButtonPressedEvent. Contains move button and mouse event
+            </summary>
+        </member>
+        <member name="M:Launchpad.Structures.EventArgs.MoveButtonPressedEventArgs.#ctor(System.Windows.RoutedEvent,System.Object)">
+            <summary>
+            Create new instant
+            </summary>
+            <param name="revent">Routed event</param>
+            <param name="source">Rectangle source</param>
+        </member>
+        <member name="M:Launchpad.Structures.EventArgs.MoveButtonPressedEventArgs.#ctor(System.Windows.RoutedEvent,System.Object,System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Create new instant
+            </summary>
+            <param name="revent">Routed event</param>
+            <param name="source">Rectangle source</param>
+            <param name="e">Mouse event</param>
+        </member>
+        <member name="P:Launchpad.Structures.EventArgs.MoveButtonPressedEventArgs.MoveButton">
+            <summary>
+            Move button of the event occurred
+            </summary>
+        </member>
+        <member name="P:Launchpad.Structures.EventArgs.MoveButtonPressedEventArgs.MouseEvent">
+            <summary>
+            Mouse event of the event occurred
+            </summary>
+        </member>
+        <member name="T:Launchpad.Structures.EventArgs.MK2ModeChangedEventArgs">
+            <summary>
+            Provide data for ModeChangedEvent of <see cref="T:Launchpad.Launchpad_MK2"/>. Contains mode button and mouse event
+            </summary>
+        </member>
+        <member name="M:Launchpad.Structures.EventArgs.MK2ModeChangedEventArgs.#ctor(System.Windows.RoutedEvent,System.Object)">
+            <summary>
+            Create new instant
+            </summary>
+            <param name="revent">Routed event</param>
+            <param name="source">Rectangle source</param>
+        </member>
+        <member name="M:Launchpad.Structures.EventArgs.MK2ModeChangedEventArgs.#ctor(System.Windows.RoutedEvent,System.Object,System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Create new instant
+            </summary>
+            <param name="revent">Routed event</param>
+            <param name="source">Rectangle source</param>
+            <param name="e">Mouse event</param>
+        </member>
+        <member name="P:Launchpad.Structures.EventArgs.MK2ModeChangedEventArgs.Mode">
+            <summary>
+            Mode button of the event occurred
+            </summary>
+        </member>
+        <member name="P:Launchpad.Structures.EventArgs.MK2ModeChangedEventArgs.MouseEvent">
+            <summary>
+            Mouse event of the event occurred
+            </summary>
+        </member>
+        <member name="T:Launchpad.Structures.EventArgs.ProModeChangedEventArgs">
+            <summary>
+            Provide data for ModeChangedEvent of <see cref="T:Launchpad.Launchpad_Pro"/>. Contains mode button and mouse event
+            </summary>
+        </member>
+        <member name="M:Launchpad.Structures.EventArgs.ProModeChangedEventArgs.#ctor(System.Windows.RoutedEvent,System.Object)">
+            <summary>
+            Create new instant
+            </summary>
+            <param name="revent">Routed event</param>
+            <param name="source">Rectangle source</param>
+        </member>
+        <member name="M:Launchpad.Structures.EventArgs.ProModeChangedEventArgs.#ctor(System.Windows.RoutedEvent,System.Object,System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Create new instant
+            </summary>
+            <param name="revent">Routed event</param>
+            <param name="source">Rectangle source</param>
+            <param name="e">Mouse event</param>
+        </member>
+        <member name="P:Launchpad.Structures.EventArgs.ProModeChangedEventArgs.Mode">
+            <summary>
+            Mode button for the event occurred
+            </summary>
+        </member>
+        <member name="P:Launchpad.Structures.EventArgs.ProModeChangedEventArgs.MouseEvent">
+            <summary>
+            Mouse event of the event occurred
+            </summary>
+        </member>
+        <member name="T:Launchpad.Structures.EventArgs.MixerButtonPressedEventArgs">
+            <summary>
+            Provide data for MixerChangedEvent. Contains mixer button and mouse event
+            </summary>
+        </member>
+        <member name="M:Launchpad.Structures.EventArgs.MixerButtonPressedEventArgs.#ctor(System.Windows.RoutedEvent,System.Object)">
+            <summary>
+            Create new instant
+            </summary>
+            <param name="revent">Routed event</param>
+            <param name="source">Rectangle source</param>
+        </member>
+        <member name="M:Launchpad.Structures.EventArgs.MixerButtonPressedEventArgs.#ctor(System.Windows.RoutedEvent,System.Object,System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Create new instant
+            </summary>
+            <param name="revent">Routed event</param>
+            <param name="source">Rectangle source</param>
+            <param name="e">Mouse event</param>
+        </member>
+        <member name="P:Launchpad.Structures.EventArgs.MixerButtonPressedEventArgs.Mixer">
+            <summary>
+            Mixer button of the event occurred
+            </summary>
+        </member>
+        <member name="P:Launchpad.Structures.EventArgs.MixerButtonPressedEventArgs.MouseEvent">
+            <summary>
+            Mouse event of the event occurred
+            </summary>
+        </member>
+        <member name="T:Launchpad.Structures.EventArgs.FunctionButtonPressedEventArgs">
+            <summary>
+            Provide data for FunctionChangedEvent. Contains function button and mouse event
+            </summary>
+        </member>
+        <member name="M:Launchpad.Structures.EventArgs.FunctionButtonPressedEventArgs.#ctor(System.Windows.RoutedEvent,System.Object)">
+            <summary>
+            Create new instant
+            </summary>
+            <param name="revent">Routed event</param>
+            <param name="source">Rectangle source</param>
+        </member>
+        <member name="M:Launchpad.Structures.EventArgs.FunctionButtonPressedEventArgs.#ctor(System.Windows.RoutedEvent,System.Object,System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Create new instant
+            </summary>
+            <param name="revent">Routed event</param>
+            <param name="source">Rectangle source</param>
+            <param name="e">Mouse event</param>
+        </member>
+        <member name="P:Launchpad.Structures.EventArgs.FunctionButtonPressedEventArgs.Function">
+            <summary>
+            Function button of the event occurred
+            </summary>
+        </member>
+        <member name="P:Launchpad.Structures.EventArgs.FunctionButtonPressedEventArgs.MouseEvent">
+            <summary>
+            Mouse event of the event occurred
+            </summary>
+        </member>
+        <member name="T:Launchpad.Structures.Location">
+            <summary>
+            Structure of launchpad key's location
+            </summary>
+        </member>
+        <member name="M:Launchpad.Structures.Location.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Create new instant with x, y
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+        </member>
+        <member name="M:Launchpad.Structures.Location.#ctor(Launchpad.Structures.Location)">
+            <summary>
+            Create new instant with location
+            </summary>
+            <param name="location"></param>
+        </member>
+        <member name="M:Launchpad.Structures.Location.FromButton(System.String)">
+            <summary>
+            Create new instant from button. Don't use manually
+            </summary>
+            <param name="btn">Name of button</param>
+            <returns></returns>
+        </member>
+        <member name="P:Launchpad.Structures.Location.X">
+            <summary>
+            X-coordinate of location
+            </summary>
+        </member>
+        <member name="P:Launchpad.Structures.Location.Y">
+            <summary>
+            Y-coordinate of location
+            </summary>
+        </member>
+    </members>
+</doc>
