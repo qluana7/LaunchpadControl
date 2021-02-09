@@ -48,6 +48,10 @@ private void LpPro_ButtonPressed(object sender, RoutedEventArgs e)
 }
 ```
 
+- Preview
+
+<img src="/LaunchpadPreview.png" width=300 height=300>
+
 ## Reference
 
 [Velocity Color Value for Launchpad](https://github.com/Lukince/LaunchpadColor)
