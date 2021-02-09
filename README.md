@@ -22,8 +22,8 @@ C# Version
 - Net5.0 wpf (Netframwork version will add later)
 
 Nugets
-- MouseKeyHook/5.6.0v (https://github.com/gmamaladze/globalmousekeyhook)
-- midi-dot-net2/2.0.1v (https://github.com/micdah/midi-dot-net)
+- [MouseKeyHook/5.6.0v](https://github.com/gmamaladze/globalmousekeyhook)
+- [midi-dot-net2/2.0.1v](https://github.com/micdah/midi-dot-net)
 
 ## How to use
 
