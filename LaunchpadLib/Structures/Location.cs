@@ -46,5 +46,14 @@ namespace Launchpad.Structures
         /// Y-coordinate of location
         /// </summary>
         public int Y { get; set; }
+
+        /// <summary>
+        /// return to string as "X, Y"
+        /// </summary>
+        /// <returns>"X, Y"</returns>
+        public override string ToString()
+        {
+            return $"{X}, {Y}";
+        }
     }
 }

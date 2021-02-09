@@ -859,5 +859,11 @@
             Y-coordinate of location
             </summary>
         </member>
+        <member name="M:Launchpad.Structures.Location.ToString">
+            <summary>
+            return to string as "X, Y"
+            </summary>
+            <returns>"X, Y"</returns>
+        </member>
     </members>
 </doc>

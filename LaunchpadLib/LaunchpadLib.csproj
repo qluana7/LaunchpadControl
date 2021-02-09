@@ -10,6 +10,10 @@
     <DocumentationFile>D:\C#DLL\LaunchpadLib\LaunchpadLib\LaunchpadLib.xml</DocumentationFile>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>D:\C#DLL\LaunchpadLib\LaunchpadLib\LaunchpadLib.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="midi-dot-net2" Version="2.0.1" />
     <PackageReference Include="MouseKeyHook" Version="5.6.0" />
