@@ -50,7 +50,8 @@ private void LpPro_ButtonPressed(object sender, RoutedEventArgs e)
 
 - Preview
 
-<img src="/LaunchpadPreview.png" width=300 height=300>
+<img src="/LaunchpadPreview.png" width=300 height=300> <br>
+~~Quality Broken :( I will fix later~~
 
 ## Reference
 
